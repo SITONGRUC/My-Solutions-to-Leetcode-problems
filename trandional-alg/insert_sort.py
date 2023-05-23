@@ -1,4 +1,4 @@
-def inset_sort(lists):
+def insert_sort(lists):
     for i in range(1,len(lists)):
         key = lists[i]
         j = i-1
