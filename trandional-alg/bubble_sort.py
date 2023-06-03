@@ -1,4 +1,4 @@
-def shell_sort(data):
+def bubble_sort(data):
     for x in range(len(data)-1,0,-1):
         for i in range(x):
             j = i+1
@@ -15,4 +15,4 @@ def shell_sort(data):
 
 
 data = [101,2,4,5,2,1,2,32,34,4]
-print(shell_sort(data))
+print(bubble_sort(data))
