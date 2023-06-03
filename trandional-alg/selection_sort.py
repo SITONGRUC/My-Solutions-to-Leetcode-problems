@@ -6,5 +6,5 @@ def selection_sort(lst):
             if lst[j] < lst[min_index]:
                 min_index = j
 
-        lst[min_index], lst[i] = lst[i], lst[min_index]
+        lst[min_index], lst[i] = lst[i], lst[min_index] #This line is important. pay attention to which values you are attached to 
     return lst
