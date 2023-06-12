@@ -12,3 +12,8 @@ ORDER BY score DESC;
 
 
 #Or just using dense_rank()
+
+SELECT 
+score,
+DENSE_RANK() OVER(ORDER BY score DESC)  AS 'rank'
+FROM Scores AS s;
