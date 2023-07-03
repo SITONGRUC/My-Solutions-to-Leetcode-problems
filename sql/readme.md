@@ -6,6 +6,7 @@ this function is useful DATE_ADD('2019-07-27', INTERVAL -29 DAY)\
 pay attention to date, it's str and should be attached with ''\
 EXTRACT(MONTH FROM "2017-06-15")\
 
-rank give the same number to which has the same values while row_number didn't\
+rank give the same number to which has the same values while row_number didn't\ 
+and there is dense_rank()
 
 
