@@ -12,7 +12,20 @@ SUM(CASE WHEN action = 'Ignored' THEN 1 ELSE 0 END) OVER(PARTITION BY ad_id) AS 
 from Ads) AS res
 ORDER BY ctr DESC,ad_id ASC;
 
+SELECT
+ad_id,
+if(Clicked+Viewed = 0, ROUND(0,2), ROUND(Clicked*100/(Viewed+Clicked),2)) AS ctr
+FROM
+(select 
+DISTINCT
+ad_id,
+SUM(if(action = 'Clicked', 1, 0)) OVER(PARTITION BY ad_id) AS Clicked,
+SUM(if(action = 'Viewed', 1, 0)) OVER(PARTITION BY ad_id) AS Viewed,
+SUM(if(action = 'Ignored', 1, 0)) OVER(PARTITION BY ad_id) AS Ignored
+from Ads) AS res
+ORDER BY ctr DESC,ad_id ASC;
 
+#if is slow
 
 
 #Write your MySQL query statement below
