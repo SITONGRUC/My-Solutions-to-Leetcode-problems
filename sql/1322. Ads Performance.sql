@@ -1,3 +1,20 @@
+SELECT
+ad_id,
+CASE WHEN Clicked+Viewed = 0 THEN ROUND(0,2)
+ELSE ROUND(Clicked*100/(Viewed+Clicked),2) END AS ctr 
+FROM
+(select 
+DISTINCT
+ad_id,
+SUM(CASE WHEN action = 'Clicked' THEN 1 ELSE 0 END) OVER(PARTITION BY ad_id) AS Clicked,
+SUM(CASE WHEN action = 'Viewed' THEN 1 ELSE 0 END) OVER(PARTITION BY ad_id) AS Viewed,
+SUM(CASE WHEN action = 'Ignored' THEN 1 ELSE 0 END) OVER(PARTITION BY ad_id) AS Ignored
+from Ads) AS res
+ORDER BY ctr DESC,ad_id ASC;
+
+
+
+
 #Write your MySQL query statement below
 SELECT
 ad_id,
