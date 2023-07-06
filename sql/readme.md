@@ -12,5 +12,12 @@ The differenct between dense_rank() and rank() is that  RANK numbers are skipped
 GROUP_CONCAT(DISTINCT product ORDER BY product ASC SEPARATOR ',')\
 SELECT '10-15>' AS bin FROM ifio
 
+SELECT book_id
+             FROM Orders
+             WHERE dispatch_date BETWEEN '2018-06-23' AND '2019-06-23'
+             GROUP BY book_id
+             Having sum(quantity) >= 10\
+             
+
 
 
