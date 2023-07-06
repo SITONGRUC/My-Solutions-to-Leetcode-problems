@@ -17,7 +17,8 @@ FROM Orders
 WHERE dispatch_date BETWEEN '2018-06-23' AND '2019-06-23'
 GROUP BY book_id
 Having sum(quantity) >= 10\
-             EXTRACT(dow FROM rental_date) AS dayofweek,
+             EXTRACT(dow FROM rental_date) AS dayofweek,\
+UPPER() LOWER() INITCAP()
              
 
 
