@@ -1,0 +1,10 @@
+# Write your MySQL query statement below
+SELECT
+business_id
+FROM
+(SELECT
+*,
+AVG(occurences) OVER(PARTITION BY event_type) AS avg_activity
+FROM Events) AS res1
+GROUP BY business_id
+HAVING SUM(CASE WHEN occurences > avg_activity THEN 1 ELSE 0 END) > 1
