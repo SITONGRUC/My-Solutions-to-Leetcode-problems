@@ -20,8 +20,8 @@ Having sum(quantity) >= 10\
              EXTRACT(dow FROM rental_date) AS dayofweek,\
 UPPER() LOWER() INITCAP() REVERSE() TRIM() RPAD() LPAD()\
 
-ALWAYS transform null to 0
-             
+ALWAYS transform null to 0\
 
+datediff() To compute datadiff()
 
 
