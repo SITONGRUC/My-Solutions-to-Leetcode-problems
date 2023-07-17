@@ -22,6 +22,8 @@ UPPER() LOWER() INITCAP() REVERSE() TRIM() RPAD() LPAD()\
 
 ALWAYS transform null to 0\
 
-datediff() To compute datadiff()
+datediff() To compute datadiff()\
+
+TIMESTAMPDIFF(HOUR, out_time, in_time)
 
 
