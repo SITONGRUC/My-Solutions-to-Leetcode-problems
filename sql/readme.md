@@ -24,6 +24,9 @@ ALWAYS transform null to 0\
 
 datediff() To compute datadiff()\
 
-TIMESTAMPDIFF(HOUR, out_time, in_time)
+TIMESTAMPDIFF(HOUR, out_time, in_time)\
+
+SELECT DATE_FORMAT(day, "%W, %M %e, %Y") AS day
+FROM Days
 
 
