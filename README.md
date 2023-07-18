@@ -3,3 +3,7 @@ These are my solutions to the problems I've solved from the website leetcode.com
 I'll be uploading the solutions to more problems as I solve them.  NOTE: I have uploaded only the "solution class" of the code. 
 If you want to run the code, please copy and paste it in the corresponding problem page's editor on the leetcode website.
 And the names of the file are consisting of two parts. Knowledge-leetcodenumber
+
+## note for sql
+
+
