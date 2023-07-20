@@ -50,10 +50,10 @@ DENSE_RANK numbers are not skipped so there will not be a gap in rankings, and m
 
 2. UPPER() LOWER() INITCAP() REVERSE() TRIM() RPAD() LPAD()
 
+## Regular Experssion
 
-
-
-
+For example.东西
+'^[a-zA-Z]+[a-zA-Z-._0-9].*?@leetcode[.]com$'
 
 
 
