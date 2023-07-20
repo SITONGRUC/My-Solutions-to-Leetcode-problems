@@ -52,7 +52,7 @@ DENSE_RANK numbers are not skipped so there will not be a gap in rankings, and m
 
 ## Regular Experssion
 
-For example.东西
+For example.
 '^[a-zA-Z]+[a-zA-Z-._0-9].*?@leetcode[.]com$'
 
 
