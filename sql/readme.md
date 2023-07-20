@@ -55,6 +55,18 @@ DENSE_RANK numbers are not skipped so there will not be a gap in rankings, and m
 For example.
 '^[a-zA-Z]+[a-zA-Z-._0-9].*?@leetcode[.]com$'
 
+[] stand for only one char
+
+For example [0-9],[a-z],[A-Z] [A-Za-z0-9_] 
+
+[^n-z] means except, ^ is stand for except. 
+
+This quantifier can be used with any character, or special metacharacters, for example w{3} (three w's), [wxy]{5} (five characters, each of which can be a w, x, or y) and .{2,6} (between two and six of any character).
+
+These quantifiers can be used with any character or special metacharacters, for example a+ (one or more a's), [abc]+ (one or more of any a, b, or c character) and .* (zero or more of any character).
+
+
+
 
 
 
