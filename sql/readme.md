@@ -35,10 +35,13 @@ Pay attention to the window function. lag() OVER(ORDER BY) partition is not need
 
 5. DATE_FORMAT(day, "%W, %M %e, %Y") : just link the one in python, you could extract different format of time in the output.
 
-|  Effect   | SQL  | Python |
-|  timedelta  | DATE_ADD('2019-07-27', INTERVAL -29 DAY) | x+datetime.timedelta(days=1, hours=6) |
-| 单元格  | 单元格 ||
-| 单元格  | 单元格 ||
+
+|  Effect   | SQL  | Python | Note |
+|  ----  | ----  | ---- | ---- |
+|  timedelta  | DATE_ADD('2019-07-27', INTERVAL -29 DAY) | x+datetime.timedelta(days=1, hours=6) ||
+| Extract  | SUBSTR(date,1,7) | data.apply(lambda x:x[:7]) ||
+| Extract | EXTRACT(YEAR FROM "2017-06-15") | data[0].apply(lambda x:x.strftime('%Y')) ||
+| re-format | DATE_FORMAT(day, "%W, %M %e, %Y") | data[0].apply(lambda x:x.strftime('%Y,%w')) ||
 
 
 |  Effect  | SQL  | Python |
