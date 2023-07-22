@@ -42,12 +42,8 @@ Pay attention to the window function. lag() OVER(ORDER BY) partition is not need
 | Extract  | SUBSTR(date,1,7) | data.apply(lambda x:x[:7]) ||
 | Extract | EXTRACT(YEAR FROM "2017-06-15") | data[0].apply(lambda x:x.strftime('%Y')) ||
 | re-format | DATE_FORMAT(day, "%W, %M %e, %Y") | data[0].apply(lambda x:x.strftime('%Y,%w')) ||
+| diff |  TIMESTAMPDIFF(HOUR, out_time, in_time) | date1-date2 ||
 
-
-|  Effect  | SQL  | Python |
-|  ----  | ----  | ---- |
-|  timedelta   |  DATE_ADD('2019-07-27', INTERVAL -29 DAY) | x+datetime.timedelta(days=1, hours=6) |
-| 单元格  | 单元格 |单元格 |
 
 
 
