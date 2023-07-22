@@ -40,10 +40,14 @@ Pay attention to the window function. lag() OVER(ORDER BY) partition is not need
 | 单元格  | 单元格 ||
 | 单元格  | 单元格 ||
 
+
 |  Effect  | SQL  | Python |
 |  ----  | ----  | ---- |
 |  timedelta   |  DATE_ADD('2019-07-27', INTERVAL -29 DAY) | x+datetime.timedelta(days=1, hours=6) |
 | 单元格  | 单元格 |单元格 |
+
+
+
 ## Windows function: 
 
 1. RANK() VS DENSE_RAN():  rank gives the same number, which has the same values, while row_number doesn't and there is dense_rank()
