@@ -35,6 +35,11 @@ Pay attention to the window function. lag() OVER(ORDER BY) partition is not need
 
 5. DATE_FORMAT(day, "%W, %M %e, %Y") : just link the one in python, you could extract different format of time in the output.
 
+|  表头   | 表头  |
+|  ----  | ----  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+
 
 ## Windows function: 
 
