@@ -61,6 +61,15 @@ DENSE_RANK numbers are not skipped so there will not be a gap in rankings, and m
 
 2. UPPER() LOWER() INITCAP() REVERSE() TRIM() RPAD() LPAD()
 
+|  Excel   | SQL  | Python | Note |
+|  ----  | ----  | ---- | ---- |
+|  IF()  | CASE WHEN | apply/transform ||
+|  CONCAT() | CONCAT() | + ||
+| MID() | SUBSTR() | [:23] ||
+| REPLACE(A3,3,2,"10") | REPLACE() | re.sub()/re.replace() ||
+| need to program in macro |  REG/LIKE | re.findall()/pd.contains() ||
+   
+
 ## Regular Experssion
 
 For example.
