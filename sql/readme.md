@@ -6,7 +6,7 @@
   
 2. ALWAYS transform null to 0.when you have some selection result to output. please check on whether there are nulls in the result or not. 
 
-
+3. how to use povit in   sql is a issue
 ## WHERE AREA and HAVING AREA
 
 1. Between is inclusive on both sides
