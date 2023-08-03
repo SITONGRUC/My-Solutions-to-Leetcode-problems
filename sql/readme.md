@@ -85,15 +85,24 @@ This quantifier can be used with any character, or special metacharacters, for e
 
 These quantifiers can be used with any character or special metacharacters, for example a+ (one or more a's), [abc]+ (one or more of any a, b, or c character) and .* (zero or more of any character).
 
-## Python VS SQL 
+## Python VS SQL ALL 
 
 |  Function   | SQL  | Python | Note |
 |  ----  | ----  | ---- | ---- |
+|  timedelta  | DATE_ADD('2019-07-27', INTERVAL -29 DAY) | x+datetime.timedelta(days=1, hours=6) ||
+| Extract  | SUBSTR(date,1,7) | data.apply(lambda x:x[:7]) ||
+| Extract | EXTRACT(YEAR FROM "2017-06-15") | data[0].apply(lambda x:x.strftime('%Y')) ||
+| re-format | DATE_FORMAT(day, "%W, %M %e, %Y") | data[0].apply(lambda x:x.strftime('%Y,%w')) ||
+| diff |  TIMESTAMPDIFF(HOUR, out_time, in_time) | date1-date2 ||
 |  IF()  | CASE WHEN | apply/transform ||
 |  CONCAT() | CONCAT() | + ||
 | MID() | SUBSTR() | [:23] ||
 | REPLACE(A3,3,2,"10") | REPLACE() | re.sub()/re.replace() ||
 | need to program in macro |  REG/LIKE | re.findall()/pd.contains() ||
+| NOT IN / IN  |  NOT IN / IN  | isin()/~isin() ||
+
+
+
 
 
 
