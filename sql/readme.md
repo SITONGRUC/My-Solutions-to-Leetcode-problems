@@ -85,9 +85,15 @@ This quantifier can be used with any character, or special metacharacters, for e
 
 These quantifiers can be used with any character or special metacharacters, for example a+ (one or more a's), [abc]+ (one or more of any a, b, or c character) and .* (zero or more of any character).
 
+## Python VS SQL 
 
-
-
+|  Function   | SQL  | Python | Note |
+|  ----  | ----  | ---- | ---- |
+|  IF()  | CASE WHEN | apply/transform ||
+|  CONCAT() | CONCAT() | + ||
+| MID() | SUBSTR() | [:23] ||
+| REPLACE(A3,3,2,"10") | REPLACE() | re.sub()/re.replace() ||
+| need to program in macro |  REG/LIKE | re.findall()/pd.contains() ||
 
 
 
