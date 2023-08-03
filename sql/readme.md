@@ -100,6 +100,7 @@ These quantifiers can be used with any character or special metacharacters, for 
 | REPLACE(A3,3,2,"10") | REPLACE() | re.sub()/re.replace() ||
 | need to program in macro |  REG/LIKE | re.findall()/pd.contains() ||
 | NOT IN / IN  |  NOT IN / IN  | isin()/~isin() ||
+| AGG analysis  | Window function/GROUP BY  | groupby  ||
 
 
 
