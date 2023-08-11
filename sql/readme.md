@@ -44,7 +44,7 @@ Pay attention to the window function. lag() OVER(ORDER BY) partition is not need
 | re-format | DATE_FORMAT(day, "%W, %M %e, %Y") | data[0].apply(lambda x:x.strftime('%Y,%w')) ||
 | diff |  TIMESTAMPDIFF(HOUR, out_time, in_time) | date1-date2 ||
 
-
+Try to use DATE_FORMAT()
 
 
 ## Windows function: 
