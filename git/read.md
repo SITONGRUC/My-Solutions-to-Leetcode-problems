@@ -1,1 +1,2 @@
-This is for command line practice
+This is for command line practice \
+Included the git using
