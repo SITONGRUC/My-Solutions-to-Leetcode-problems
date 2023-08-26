@@ -55,6 +55,14 @@ The difference between dense_rank() and rank() is that  RANK numbers are skipped
 
 DENSE_RANK numbers are not skipped so there will not be a gap in rankings, and may not be unique
 
+## Some Pandas
+
+scores['rank'] = scores['score'].rank(method='dense', ascending=False)
+
+result_df = scores.drop('id',axis=1).sort_values(by='score', ascending=False)
+
+
+
 ## String function 
 
 1. GROUP_CONCAT() & CONCAT(): you could use GROUP_CONCAT function to concatenate strings. Example: GROUP_CONCAT(DISTINCT product ORDER BY product ASC SEPARATOR ',')
