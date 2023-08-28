@@ -47,6 +47,14 @@ git pull (update your local rep)
 
 git push origin main ( update your remote rep) 
 
+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
+
+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
+
+git remote set-url origin https://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@github.com/SITONGRUC/My-Solutions-to-Leetcode-problems.git
+
+
+
 
 
 
