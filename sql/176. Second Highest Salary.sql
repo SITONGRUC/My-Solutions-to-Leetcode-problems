@@ -9,3 +9,8 @@ FROM Employee) AS res
 
 #Dense_rank() NO gap
 
+select
+(select distinct Salary 
+from Employee order by salary desc 
+limit 1 offset 1) 
+
