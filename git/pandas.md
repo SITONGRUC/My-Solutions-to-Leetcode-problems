@@ -52,6 +52,7 @@ ls *.sh
 
 ls *.pdf
 
+ls | grep "^bkvita"
 
 convert image.png image.jpg
 
