@@ -18,7 +18,7 @@ git add hello.txt
 
 git commit
 
-git log --all --graph --decorate
+git log --all --graph --decorate(press Q to quit)
 
 git checkout 9e8d705cf( could check out different commit, move head from upset down)
 
