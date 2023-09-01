@@ -13,3 +13,17 @@ FROM Orders
 WHERE YEAR(order_date) = 2019
 GROUP BY buyer_id) AS  cnt
 ON cnt.buyer_id = Users.user_id;
+
+
+
+
+SELECT
+DISTINCT 
+u.user_id  AS buyer_id,
+u.join_date AS join_date,
+SUM(CASE WHEN order_id IS NOT NULL AND YEAR(o.order_date) = 2019 THEN 1 ELSE 0 END) OVER(PARTITION BY u.user_id)  AS orders_in_2019
+FROM 
+Users AS u
+LEFT JOIN 
+Orders AS o
+ON u.user_id = o.buyer_id
