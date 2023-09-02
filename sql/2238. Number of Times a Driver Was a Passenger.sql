@@ -30,3 +30,12 @@ GROUP BY passenger_id) AS res
 ON r.driver_id = res.driver_id
 
 
+SELECT
+DISTINCT 
+r1.driver_id,
+COUNT(DISTINCT r2.ride_id) AS cnt
+FROM 
+Rides AS r1
+LEFT JOIN Rides AS r2
+ON r1.driver_id = r2.passenger_id
+GROUP BY r1.driver_id
