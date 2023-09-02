@@ -13,3 +13,20 @@ COUNT(ride_id ) AS cnt
 FROM Rides 
 GROUP BY passenger_id) AS r
 ON r.passenger_id  = first.driver_id 
+
+SELECT
+DISTINCT 
+r.driver_id,
+CASE WHEN res.cnt IS NULL THEN 0 ELSE res.cnt END AS cnt
+FROM 
+Rides AS r
+LEFT JOIN 
+(SELECT
+passenger_id AS driver_id,
+COUNT(ride_id) AS cnt
+FROM Rides
+WHERE passenger_id IN (SELECT driver_id FROM Rides)
+GROUP BY passenger_id) AS res
+ON r.driver_id = res.driver_id
+
+
