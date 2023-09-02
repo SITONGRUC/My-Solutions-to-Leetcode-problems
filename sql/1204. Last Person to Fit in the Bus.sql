@@ -10,3 +10,16 @@ ORDER BY turn) AS res
 WHERE total_weight<=1000
 ORDER BY total_weight DESC
 LIMIT 1;
+
+SELECT
+person_name
+FROM 
+(SELECT 
+*,
+SUM(weight) OVER(ORDER BY turn ASC ) AS total_weight
+FROM Queue
+) AS res
+WHERE total_weight <=1000
+ORDER BY total_weight DESC
+LIMIT 1
+
