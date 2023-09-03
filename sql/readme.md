@@ -3,8 +3,14 @@
 ## What we need to do SQL question 
 
 1. JOIN Fuction : LEFT JOIN/RIGHT JOIN/CROSS JOIN
-2. 
-3. 
+2. GROUP BY and HAVING: 
+3. CASE function: CASE WHEN ... ELSE ... END
+4. WINDOW FUNCTION: LAG(),LEAD(),RANK(),MAX() MIN(),SUM(),DENSE_RANK()
+   SUM() OVER(PARTITION BY ... ORDER BY ..) 
+3. IN: some columns is in a list. There is two list function. First is (1,2,3) OR you could use (SELECT A FROM B)
+4. Basic funtion: MAX(),MIN(), SUM() ROUND()
+5. Basic computation: %,
+6. Table computation: UNION,UNIONALL, EXCEPT( you may use join to solve as well)
 
 ## Selection area
 
