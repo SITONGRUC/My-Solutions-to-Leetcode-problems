@@ -1,5 +1,11 @@
 # This is a note for SQL
 
+## What we need to do SQL question 
+
+1. JOIN Fuction : LEFT JOIN/RIGHT JOIN/CROSS JOIN
+2. 
+3. 
+
 ## Selection area
 
 1. SELECT '10-15>' AS bin FROM ifio : you could just input the string to the selection result.
