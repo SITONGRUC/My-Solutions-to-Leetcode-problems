@@ -1,5 +1,7 @@
 pwd
 
+pwd
+
 ls
 
 mkdir demo
