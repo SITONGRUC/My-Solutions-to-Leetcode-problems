@@ -6,3 +6,12 @@ FROM Courses
 GROUP BY class
 HAVING COUNT(student) >= 5) AS c;
 #Pay attetnion to 'HAVING'
+
+
+
+# Write your MySQL query statement below
+SELECT
+DISTINCT class
+FROM Courses
+GROUP BY class 
+HAVING COUNT(student) >= 5
