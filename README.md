@@ -1,4 +1,4 @@
-# My-Solutions-to-Leetcode-problems-using-Python-3
+# My-Solutions-to-Leetcode-problems
 These are my solutions to the problems I've solved from the website leetcode.com using python. 
 I'll be uploading the solutions to more problems as I solve them.  NOTE: I have uploaded only the "solution class" of the code. 
 And it's also for sql, excel comparison with python
