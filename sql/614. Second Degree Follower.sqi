@@ -7,3 +7,13 @@ FROM Follow
 WHERE followee IN (SELECT follower FROM Follow)
 GROUP BY followee
 ORDER BY follower ASC;
+
+SELECT
+DISTINCT f1.followee AS follower,
+COUNT(DISTINCT f1.follower) AS num
+FROM Follow AS f1
+LEFT JOIN Follow AS f2
+ON f1.followee = f2.follower
+WHERE f2.followee IS NOT NULL 
+GROUP BY f1.followee
+ORDER BY f1.followee ASC
