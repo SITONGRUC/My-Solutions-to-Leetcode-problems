@@ -15,3 +15,18 @@ FROM SurveyLog
 GROUP BY question_id) AS res
 ORDER BY rank1 ASC,question_id ASC) AS res2
 limit 1;
+
+SELECT
+question_id AS survey_log
+FROM (
+SELECT
+question_id,
+SUM(CASE WHEN action = 'answer' THEN 1 
+WHEN action = 'show' THEN 0
+ELSE NULL END )/COUNT(CASE WHEN action = 'answer' THEN 1 
+WHEN action = 'show' THEN 0
+ELSE NULL END ) AS rnk
+FROM SurveyLog
+GROUP BY question_id
+ORDER  BY rnk DESC, question_id ASC 
+LIMIT 1) AS res
