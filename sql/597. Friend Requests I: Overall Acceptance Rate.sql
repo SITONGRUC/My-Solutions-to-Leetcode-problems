@@ -15,3 +15,11 @@ FROM
 DISTINCT requester_id,accepter_id
 FROM RequestAccepted
 ) AS acc) AS num2;
+
+
+SELECT 
+  
+  ROUND( CASE WHEN count(DISTINCT r.requester_id, r.accepter_id)/count(DISTINCT f.sender_id, f.send_to_id) IS NOT NULL THEN count(DISTINCT r.requester_id, r.accepter_id)/count(DISTINCT f.sender_id, f.send_to_id) ELSE 0 END,2) AS accept_rate 
+  
+  FROM FriendRequest AS f,RequestAccepted AS R; 
+
