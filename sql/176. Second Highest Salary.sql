@@ -1,6 +1,6 @@
 # Write your MySQL query statement below
 SELECT
-SUM(CASE WHEN rank1 = 2 THEN salary ELSE NULL END) AS SecondHighestSalary
+AVG(CASE WHEN rank1 = 2 THEN salary ELSE NULL END) AS SecondHighestSalary
 FROM
 (SELECT
 salary,
