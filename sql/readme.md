@@ -85,7 +85,7 @@ result_df = scores.drop('id',axis=1).sort_values(by='score', ascending=False)
 |  ----  | ----  | ---- | ---- |
 |  IF()  | CASE WHEN | apply/transform ||
 |  CONCAT() | CONCAT() | + ||
-| MID() | SUBSTR() | [:23] ||
+| MID() | SUBSTR() | [:23] |for SUBSTR, both sides of interval is included|
 | REPLACE(A3,3,2,"10") | REPLACE() | re.sub()/re.replace() ||
 | need to program in macro |  REG/LIKE | re.findall()/pd.contains() ||
    
