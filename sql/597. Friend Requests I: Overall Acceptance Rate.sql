@@ -23,3 +23,13 @@ SELECT
   
   FROM FriendRequest AS f,RequestAccepted AS R; 
 
+
+
+
+SELECT CASE WHEN rate.accept_rate IS NULL THEN 0 ELSE rate.accept_rate END AS accept_rate
+FROM
+ (SELECT 
+ROUND(COUNT(DISTINCT r.requester_id,r.accepter_id)/COUNT(DISTINCT f.sender_id,f.send_to_id),2) AS accept_rate 
+FROM FriendRequest AS f,RequestAccepted AS r) AS rate;
+
+
