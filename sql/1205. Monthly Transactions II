@@ -1,0 +1,17 @@
+
+SELECT SUBSTR(trans_date,1,7) AS month,
+country,
+SUM(CASE WHEN STATE ='approved' THEN 1 ELSE 0 END ) AS approved_count,
+SUM(CASE WHEN STATE ='approved' THEN amount ELSE 0 END ) AS approved_amount,
+SUM( CASE WHEN state = 'charge_back' THEN 1 ELSE 0 END ) AS chargeback_count,
+SUM( CASE WHEN state = 'charge_back' THEN amount ELSE 0 END ) AS chargeback_amount
+FROM 
+(SELECT * FROM Transactions
+UNION ALL 
+SELECT c.trans_id,t.country,'charge_back' AS state,t.amount,c.trans_date
+FROM Chargebacks AS c
+LEFT JOIN Transactions AS t
+ON c.trans_id = t.id
+WHERE t.id IS NOT NULL) AS total
+GROUP BY SUBSTR(trans_date,1,7),country
+HAVING approved_count != 0 OR approved_amount != 0 OR chargeback_count != 0 OR chargeback_amount != 0;
