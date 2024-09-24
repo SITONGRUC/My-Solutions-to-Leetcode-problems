@@ -93,6 +93,12 @@ result_df = scores.drop('id',axis=1).sort_values(by='score', ascending=False)
 | need to program in macro |  REG/LIKE | re.findall()/pd.contains() ||
    
 
+Some example
+SELECT SUBSTR(email,INSTR(email,'@')+1) as email_domain,COUNT(*) as count FROM Emails
+WHERE email LIKE '%.com'
+GROUP BY 1
+ORDER BY 1 ASC, 2 DESC;
+
 ## Regular Experssion
 useful
 For example.
