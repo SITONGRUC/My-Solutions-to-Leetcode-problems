@@ -1,0 +1,6 @@
+# Write your MySQL query statement below
+SELECT DISTINCT l.city
+FROM Listings AS l
+GROUP BY l.city
+HAVING AVG(l.price)> (SELECT AVG(price) FROM Listings)
+ORDER BY l.city ASC;
