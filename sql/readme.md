@@ -11,6 +11,9 @@
 4. Basic funtion: MAX(),MIN(), SUM() ROUND()
 5. Basic computation: %,
 6. Table computation: UNION,UNIONALL, EXCEPT( you may use join to solve as well)
+7. even number : id%2 = 1
+
+
 
 ## Selection area
 
