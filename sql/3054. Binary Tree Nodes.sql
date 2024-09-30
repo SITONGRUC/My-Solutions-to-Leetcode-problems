@@ -8,3 +8,15 @@ FROM Tree AS t1
 LEFT JOIN Tree AS t2
 ON t1.N = t2.P
 ORDER BY t1.N ASC;
+
+
+SELECT 
+N,
+  CASE 
+  WHEN P IS NULL THEN 'Root'
+    WHEN N IN (SELECT P FROM Tree) THEN 'Inner'
+    ELSE 'Leaf' 
+  END AS Type
+FROM Tree
+ORDER BY N;
+
