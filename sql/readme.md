@@ -221,7 +221,8 @@ result_df = scores.drop('id',axis=1).sort_values(by='score', ascending=False)
 
 1. GROUP_CONCAT() & CONCAT(): you could use GROUP_CONCAT function to concatenate strings. Example: GROUP_CONCAT(DISTINCT product ORDER BY product ASC SEPARATOR ',')
 
-2. UPPER() LOWER() INITCAP() REVERSE() TRIM() RPAD() LPAD()
+2. **substring_index** Return a substring of a string before a specified number of delimiter occurs:
+ SELECT substring_index("ruc.sitongli@gmail.co.m ",'.',2);
 
 3. **SUBSTR(Acolumn,1,4)** Acolumn stand for the column name, 1 means the position you would like this substring to start. and 4 stands for the length you expect for this substring.
 
@@ -234,6 +235,14 @@ And INSTR kind of use with SUBSTR, below is some exmaple
 SELECT SUBSTR(email,INSTR(email,'@')+1,INSTR(email,'.')-INSTR(email,'@')-1) FROM people;
 
 SELECT SUBSTR(email,INSTR(email,'@')+1,LENGTH(email)-INSTR(email,'@')) FROM people;
+
+5.**TRIM()** Removing the blank from both sides of a string. 
+
+SELECT CONCAT('d',TRIM('  4   '),'d');
+
+6. UPPER() LOWER() INITCAP() REVERSE() TRIM() RPAD() LPAD()
+
+
 
 |  Excel   | SQL  | Python | Note |
 |  ----  | ----  | ---- | ---- |
