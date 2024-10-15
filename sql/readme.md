@@ -22,13 +22,28 @@ The main challenge here is choosing a primary key, as the source data doesn't ha
 One approach is to use an AUTO_INCREMENT column:
 
 **主键，自动生成，除了 datatype需要紧跟 column name 剩下的位置可以随意调换**
+ eg:
+ 
+CREATE TABLE employees3 (
+emp_no INTEGER NOT NULL auto_increment PRIMARY KEY
+);
+
+CREATE TABLE employees3 (
+emp_no INTEGER auto_increment PRIMARY KEY NOT NULL
+);
+
+CREATE TABLE employees3 (
+emp_no INTEGER  PRIMARY KEY  auto_increment NOT NULL
+);
+
+以上三个玩意都可以
+
 
 **If there is no obvious primary key,one approach is to use an AUTO_INCREMENT column:**
     
 **parent table just use origianl primary key( if any ) or just creaate one (auto_increment) **
 
 **if can't add FOREIGN KEY.  you could just over it **
-
 
 ## What we need to do SQL question 
 
