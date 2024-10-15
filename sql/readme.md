@@ -4,7 +4,7 @@
 
 include Create,Drop,Alter,Rename
 
-## create:
+## CREATE:
 Include a CREATE TABLE or CREATE SCHEMA command
 
 Use DROP TABLE IF EXISTS before each CREATE TABLE statement
@@ -41,9 +41,37 @@ emp_no INTEGER  PRIMARY KEY  auto_increment NOT NULL
 
 **If there is no obvious primary key,one approach is to use an AUTO_INCREMENT column:**
     
-**parent table just use origianl primary key( if any ) or just creaate one (auto_increment) **
+**parent table just use origianl primary key( if any ) or just creaate one (auto_increment)**
 
-**if can't add FOREIGN KEY.  you could just over it **
+**if can't add FOREIGN KEY.  you could just over it**
+
+
+### restrict rules
+
+**delete restrict example**
+you could not deltete parent data on restrict mode  when the data linked to child data 
+
+**update restract exmaple**
+you could not update parent data  on restrict mode  
+when the data linked to child data ( foreign key data, if you are trying to update other data it is fine) 
+
+**update cascade example**
+if update the parent table, the child table would be update. 
+
+**DELETE cascade exmaple**
+it would delete the data in child table where raltedto to the delete datq in parent table 
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## What we need to do SQL question 
 
