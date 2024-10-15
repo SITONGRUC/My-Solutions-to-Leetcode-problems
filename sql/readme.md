@@ -107,6 +107,13 @@ UPDATE employees1 SET position  = 'hooker' WHERE emp_no = 1;
 
 ### Function List 
 
+1. **IFNULL()**
+
+Return the specified value IF the expression is NULL, otherwise return the expression:
+
+SELECT IFNULL(NULL, "W3Schools.com");
+
+
 ### What we need to do SQL question 
 
 #### 1. JOIN Fuction : LEFT JOIN/RIGHT JOIN/CROSS JOIN/INNER JOIN 
