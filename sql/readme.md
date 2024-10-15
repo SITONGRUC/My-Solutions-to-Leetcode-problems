@@ -4,7 +4,8 @@
 
 include Create,Drop,Alter,Rename
 
-[example](https://sitongruc.github.io/)
+[example](https://github.com/SITONGRUC/My-Solutions-to-Leetcode-problems/blob/main/sql/example_code/DDL.sql)
+
 
 ## CREATE:
 Include a CREATE TABLE or CREATE SCHEMA command
