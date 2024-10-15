@@ -16,7 +16,7 @@ Every table should have a primary key.
 
 Foreign Key constraints should be defined/enforced
 
-##### **After you create a database don't forget to use it **
+##### **After you create a database don't forget to use it**
 
 
 ### note 1 from lab1
