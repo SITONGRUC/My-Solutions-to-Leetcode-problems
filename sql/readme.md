@@ -4,6 +4,8 @@
 
 include Create,Drop,Alter,Rename
 
+[example](https://sitongruc.github.io/)
+
 ## CREATE:
 Include a CREATE TABLE or CREATE SCHEMA command
 
@@ -61,6 +63,20 @@ if update the parent table, the child table would be update.
 **DELETE cascade exmaple**
 it would delete the data in child table where raltedto to the delete datq in parent table 
 
+
+## DROP:
+
+##### **Drop database**
+DROP DATABASE exam1;
+would earese all database in a sec, so use it carefully 
+
+##### **Drop TABLE IF EXISTS table_name**
+always use before a create table statement. 
+
+## ALTER:
+
+**add data table**
+ALTER TABLE  employees ADD COLUMN salary INTEGER NULL;
 
 
 
