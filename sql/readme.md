@@ -103,9 +103,11 @@ UPDATE companies SET com_no = 4 WHERE com_no = 2;
 
 UPDATE employees1 SET position  = 'hooker' WHERE emp_no = 1;
 
-## SQL note 
+## SQL note ( SELECT) 
 
-## What we need to do SQL question 
+### Function List 
+
+### What we need to do SQL question 
 
 1. JOIN Fuction : LEFT JOIN/RIGHT JOIN/CROSS JOIN
 2. GROUP BY and HAVING: 
@@ -120,14 +122,14 @@ UPDATE employees1 SET position  = 'hooker' WHERE emp_no = 1;
 
 
 
-## Selection area
+### Selection area
 
 1. SELECT '10-15>' AS bin FROM ifio : you could just input the string to the selection result.
   
 2. ALWAYS transform null to 0.when you have some selection result to output. please check on whether there are nulls in the result or not. 
 
 3. how to use povit in   sql is a issue
-## WHERE AREA and HAVING AREA
+### WHERE AREA and HAVING AREA
 
 1. Between is inclusive on both sides
 
@@ -141,7 +143,7 @@ Having sum(quantity) >= 10\
              EXTRACT(dow FROM rental_date) AS dayofweek,\
    
 
-## TIME PROCESS OF MYSQL
+### TIME PROCESS OF MYSQL
 
 1. DATE_ADD(): For adding some time interval to a date. example: DATE_ADD('2019-07-27', INTERVAL -29 DAY)
 
@@ -167,7 +169,7 @@ Pay attention to the window function. lag() OVER(ORDER BY) partition is not need
 Try to use DATE_FORMAT()
 
 
-## Windows function: 
+### Windows function: 
 
 1. RANK() VS DENSE_RAN():  rank gives the same number, which has the same values, while row_number doesn't and there is dense_rank()
 
@@ -175,7 +177,7 @@ The difference between dense_rank() and rank() is that  RANK numbers are skipped
 
 DENSE_RANK numbers are not skipped so there will not be a gap in rankings, and may not be unique
 
-## Some Pandas
+### Some Pandas
 
 scores['rank'] = scores['score'].rank(method='dense', ascending=False)
 
@@ -183,7 +185,7 @@ result_df = scores.drop('id',axis=1).sort_values(by='score', ascending=False)
 
 
 
-## String function 
+### String function 
 
 1. GROUP_CONCAT() & CONCAT(): you could use GROUP_CONCAT function to concatenate strings. Example: GROUP_CONCAT(DISTINCT product ORDER BY product ASC SEPARATOR ',')
 
@@ -204,7 +206,7 @@ WHERE email LIKE '%.com'
 GROUP BY 1
 ORDER BY 1 ASC, 2 DESC;
 
-## Regular Experssion
+### Regular Experssion
 useful
 For example.
 '^[a-zA-Z]+[a-zA-Z-._0-9].*?@leetcode[.]com$'
@@ -219,7 +221,7 @@ This quantifier can be used with any character, or special metacharacters, for e
 
 These quantifiers can be used with any character or special metacharacters, for example a+ (one or more a's), [abc]+ (one or more of any a, b, or c character) and .* (zero or more of any character).
 
-## Python VS SQL ALL 
+### Python VS SQL ALL 
 
 |  Function   | SQL  | Python | Note |
 |  ----  | ----  | ---- | ---- |
