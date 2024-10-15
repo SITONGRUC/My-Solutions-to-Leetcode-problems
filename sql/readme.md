@@ -1,5 +1,35 @@
 # This is a note for SQL
 
+# data definition language (ddl)
+
+include Create,Drop,Alter,Rename
+
+## create:
+Include a CREATE TABLE or CREATE SCHEMA command
+
+Use DROP TABLE IF EXISTS before each CREATE TABLE statement
+
+Every table should have a primary key.
+
+Foreign Key constraints should be defined/enforced
+
+##### **After you create a database don't forget to use it **
+
+
+### note 1 from lab1
+The main challenge here is choosing a primary key, as the source data doesn't have an obvious primary key. 
+
+One approach is to use an AUTO_INCREMENT column:
+
+**主键，自动生成，除了 datatype需要紧跟 column name 剩下的位置可以随意调换**
+
+**If there is no obvious primary key,one approach is to use an AUTO_INCREMENT column:**
+    
+**parent table just use origianl primary key( if any ) or just creaate one (auto_increment) **
+
+**if can't add FOREIGN KEY.  you could just over it **
+
+
 ## What we need to do SQL question 
 
 1. JOIN Fuction : LEFT JOIN/RIGHT JOIN/CROSS JOIN
