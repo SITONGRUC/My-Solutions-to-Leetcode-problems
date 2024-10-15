@@ -109,17 +109,32 @@ UPDATE employees1 SET position  = 'hooker' WHERE emp_no = 1;
 
 ### What we need to do SQL question 
 
-1. JOIN Fuction : LEFT JOIN/RIGHT JOIN/CROSS JOIN
-2. GROUP BY and HAVING: 
-3. CASE function: CASE WHEN ... ELSE ... END
-4. WINDOW FUNCTION: LAG(),LEAD(),RANK(),MAX() MIN(),SUM(),DENSE_RANK()
-   SUM() OVER(PARTITION BY ... ORDER BY ..) 
-3. IN: some columns is in a list. There is two list function. First is (1,2,3) OR you could use (SELECT A FROM B)
-4. Basic funtion: MAX(),MIN(), SUM() ROUND()
-5. Basic computation: %,
-6. Table computation: UNION,UNIONALL, EXCEPT( you may use join to solve as well)
-7. even number : id%2 = 1
+#### 1. JOIN Fuction : LEFT JOIN/RIGHT JOIN/CROSS JOIN/INNER JOIN 
 
+####  2. GROUP BY and HAVING: 
+
+could add with rollup after group by. with mutilever group by it would just return different level sum. 
+
+Say we have two level of group by, with rollup we could expect one null. null row for total count, one A,null row for first level count, and all of the A,B count. 
+
+####  3. CASE function: CASE WHEN ... ELSE ... END
+
+####  4. WINDOW FUNCTION: 
+LAG(),LEAD(),RANK(),MAX() MIN(),SUM(),DENSE_RANK()  SUM() OVER(PARTITION BY ... ORDER BY ..) DENSE_RANKI()  
+
+#### 5. IN: ,ALL,and ANY 
+
+some columns is in a list. There is two list function. First is (1,2,3) OR you could use (SELECT A FROM B)
+it is a kind of division operation. 
+
+
+#### 6. Basic funtion: MAX(),MIN(), SUM() ROUND()
+
+#### 7. Basic computation: %,
+ even number : id%2 = 1
+ 
+#### 8. Table computation:
+UNION,UNIONALL, EXCEPT( you may use join to solve as well) INTERSECT 
 
 
 ### Selection area
