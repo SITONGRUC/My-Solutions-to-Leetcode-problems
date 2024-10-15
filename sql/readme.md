@@ -160,7 +160,7 @@ Having sum(quantity) >= 10\
 
 ### TIME PROCESS OF MYSQL
 
-1. DATE_ADD(): For adding some time interval to a date. example: DATE_ADD('2019-07-27', INTERVAL -29 DAY)
+1. **DATE_ADD()**: For adding some time interval to a date. example: DATE_ADD('2019-07-27', INTERVAL -29 DAY)
 
 2. SUBSTR(): since the time is a string, you could use SUBSTR() to extract time from the timestamp. Example: SUBSTR(date,1,7)
 
@@ -168,9 +168,19 @@ Having sum(quantity) >= 10\
 
 Pay attention to the window function. lag() OVER(ORDER BY) partition is not needed.EXTRACT(MONTH FROM "2017-06-15")
 
-4. datediff()&TIMESTAMPDIFF()  To compute TIMESTAMPDIFF() you could use TIMESTAMPDIFF() Example TIMESTAMPDIFF(HOUR, out_time, in_time)
+4. **datediff()&TIMESTAMPDIFF()**  To compute TIMESTAMPDIFF() you could use TIMESTAMPDIFF() Example TIMESTAMPDIFF(HOUR, out_time, in_time)
 
-5. DATE_FORMAT(day, "%W, %M %e, %Y") : just link the one in python, you could extract different format of time in the output.
+  Or you could use CURRENT_DATE key words 
+  
+  SELECT datediff(CURRENT_DATE,'2012-1-01')
+  SELECT TIMESTAMPDIFF(HOUR, '2024-09-30',CURRENT_DATE)
+
+ 5. **workday()**
+SELECT dayofweek('2024-10-11'); return to the number of weekday in a week. And rthe beginning of week is sunday.
+weekday works the same. So all we need is to remember one.
+    
+
+8. DATE_FORMAT(day, "%W, %M %e, %Y") : just link the one in python, you could extract different format of time in the output.
 
 
 |  Effect   | SQL  | Python | Note |
@@ -205,6 +215,18 @@ result_df = scores.drop('id',axis=1).sort_values(by='score', ascending=False)
 1. GROUP_CONCAT() & CONCAT(): you could use GROUP_CONCAT function to concatenate strings. Example: GROUP_CONCAT(DISTINCT product ORDER BY product ASC SEPARATOR ',')
 
 2. UPPER() LOWER() INITCAP() REVERSE() TRIM() RPAD() LPAD()
+
+3. **SUBSTR(Acolumn,1,4)** Acolumn stand for the column name, 1 means the position you would like this substring to start. and 4 stands for the length you expect for this substring.
+
+4. **INSTR(Acolumn,'.')** Acolumn stands  a column name, '.' means the text you would like to find and the function would return to the first position of this text.
+
+You could paly with this exmaple. SELECT INSTR('@@.@@.','.');
+
+And INSTR kind of use with SUBSTR, below is some exmaple 
+
+SELECT SUBSTR(email,INSTR(email,'@')+1,INSTR(email,'.')-INSTR(email,'@')-1) FROM people;
+
+SELECT SUBSTR(email,INSTR(email,'@')+1,LENGTH(email)-INSTR(email,'@')) FROM people;
 
 |  Excel   | SQL  | Python | Note |
 |  ----  | ----  | ---- | ---- |
