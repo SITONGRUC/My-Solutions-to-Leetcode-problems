@@ -83,12 +83,27 @@ ALTER TABLE  employees ADD COLUMN salary INTEGER NULL;
 
 
 
+# Data Manipulation Language (DML):
 
+include SELECT  UPDATE INSERT	 DELETE
 
+## DELETE example
 
+DELETE FROM table_name WHERE ....
 
+## INSERT example
 
+INSERT INTO offers (emp_no,com_no) VALUES(3,3);
 
+you dont need to insert auto_increment value 
+
+## UPDATE example 
+
+UPDATE companies SET com_no = 4 WHERE com_no = 2;
+
+UPDATE employees1 SET position  = 'hooker' WHERE emp_no = 1;
+
+## SQL note 
 
 ## What we need to do SQL question 
 
