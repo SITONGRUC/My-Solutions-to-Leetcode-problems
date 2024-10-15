@@ -79,6 +79,11 @@ always use before a create table statement.
 **add data table**
 ALTER TABLE  employees ADD COLUMN salary INTEGER NULL;
 
+ALTER TABLE Student	ADD COLUMN birth_year INT;
+
+ALTER TABLE Student DROP COLUMN birth_year;
+
+ALTER TABLE Student 	MODIFY COLUMN birth_year CHAR(4);
 
 
 
