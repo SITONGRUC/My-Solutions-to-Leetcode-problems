@@ -131,6 +131,13 @@ Say we have two level of group by, with rollup we could expect one null. null ro
 
 ####  3. CASE function: CASE WHEN ... ELSE ... END
 
+there is two kind of case 
+
+1 Simple case statetment : CASE [variable] WHEN [value] THEN [return value] ELSE [return] END 
+2 Searched case statement, use when there is a null value need to process 
+
+
+
 ####  4. WINDOW FUNCTION: 
 LAG(),LEAD(),RANK(),MAX() MIN(),SUM(),DENSE_RANK()  SUM() OVER(PARTITION BY ... ORDER BY ..) DENSE_RANKI()  
 
@@ -231,7 +238,9 @@ result_df = scores.drop('id',axis=1).sort_values(by='score', ascending=False)
 
 3. **SUBSTR(Acolumn,1,4)** Acolumn stand for the column name, 1 means the position you would like this substring to start. and 4 stands for the length you expect for this substring.
 
-4. **INSTR(Acolumn,'.')** Acolumn stands  a column name, '.' means the text you would like to find and the function would return to the first position of this text.
+4. **REGEXP_SUBSTR(moviename, ' [0-9]\{3\}$')** re.findall 
+
+5. **INSTR(Acolumn,'.')** Acolumn stands  a column name, '.' means the text you would like to find and the function would return to the first position of this text.
 
 You could paly with this exmaple. SELECT INSTR('@@.@@.','.');
 
