@@ -150,6 +150,14 @@ SELECT * FROM employees;
 WITH a AS (SELECT * FROM employees)
 SELECT * FROM a;
 
+CREATE VIEW [name] AS SELECT `` from ee. 
+DROP VIEW IF EXISTS v_account_avgs;
+
+ALTER TABLE vendors ADD INDEX vendor_state_ix (vendor_state);
+ALTER TABLE vendors ADD INDEX vendor_state_ix (vendor_state,vendor_state);
+ALTER TABLE vendors DROP INDEX vendor_state_ix;
+ALTER TABLE vendors ADD PRIMARY KEY (column name);
+
 
 
 
