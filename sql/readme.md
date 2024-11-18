@@ -166,7 +166,7 @@ and you need to pay attention to the null value in the function
 
 there is five kinds of key word in this experession: 
 
-    CURRENT ROW | UNBOUNDED PRECEDING (前面的) | UNBOUNDED FOLLOWING （ 后面的） | expr PRECEDING | expr FOLLOWIN
+CURRENT ROW | UNBOUNDED PRECEDING (前面的) | UNBOUNDED FOLLOWING （ 后面的） | expr PRECEDING | expr FOLLOWIN
     
 LAG(),LEAD()
 
