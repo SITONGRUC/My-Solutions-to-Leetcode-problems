@@ -85,7 +85,11 @@ ALTER TABLE Student DROP COLUMN birth_year;
 
 ALTER TABLE Student 	MODIFY COLUMN birth_year CHAR(4);
 
+## VIEW 
+CREATE VIEW [name] AS 
+(任何select 语句，你甚至能够嫁cte)
 
+CREATE VIEW view_name [(column_list)] AS select_statement
 
 
 # Data Manipulation Language (DML):
