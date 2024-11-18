@@ -155,13 +155,17 @@ SUM(): how to make a cumsum()
 if you would want to make a simple cumsum and would not like to have a window, you could just SUM(name) OVER(ORDER BY name DESC) 
 
 if you would like to hold a window: 
+
 SUM(num) OVER(ORDER BY num ROWS BETWEEN UNBOUNDED PRECEDING AND unbounded following) # 前后所有的value都加起来
+
 AVG(num) OVER(ORDER BY num ROWS BETWEEN 1 PRECEDING AND 1 following) # 一个长度为3的窗口
+
 AVG(num) OVER(ORDER BY num ROWS BETWEEN CURRENT ROW AND unbounded following) #如何写出当前的
 
 and you need to pay attention to the null value in the function 
 
 there is five kinds of key word in this experession: 
+
     CURRENT ROW | UNBOUNDED PRECEDING (前面的) | UNBOUNDED FOLLOWING （ 后面的） | expr PRECEDING | expr FOLLOWIN
     
 LAG(),LEAD()
