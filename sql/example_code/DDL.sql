@@ -159,6 +159,9 @@ ALTER TABLE vendors DROP INDEX vendor_state_ix;
 ALTER TABLE vendors ADD PRIMARY KEY (column name);
 
 
+SHOW INDEX FROM imdb;
+
+
 
 
 
