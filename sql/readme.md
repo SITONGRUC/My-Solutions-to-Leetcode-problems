@@ -140,6 +140,11 @@ there is two kind of case
 
 ####  4. WINDOW FUNCTION: 
 
+Window functions are permitted only in the select list and ORDER BY clause. Query result rows are determined from the FROM clause, after WHERE, GROUP BY, and HAVING processing, and windowing execution occurs before ORDER BY, LIMIT, and SELECT DISTINCT.
+
+If you want to filter based on the results of a window function, you generally need to use a common table expression (CTE) approach.
+
+
 ##### function list
 ROW_NUMBER(): most basic function 
 
@@ -183,6 +188,27 @@ it is a kind of division operation.
  
 #### 8. Table computation:
 UNION,UNIONALL, EXCEPT( you may use join to solve as well) INTERSECT 
+
+
+#### 9. CTE ( mainly recursive) 
+
+Recursive cte in 4 step. 
+1.	-- choose a **anchor member**
+2.	-- put the anchor part into a cte and write a secord **recursive member**
+3.	-- set an **termination condition**
+4.	-- put the step in  in and add recursive cte
+
+ANd there is two facts about CTE 
+
+first, comma
+
+WITH cte_c AS (SELECT 1 AS a), CTE_a AS (SELECT 2 AS a) 
+SELECT * FROM cet_c,cte_a;
+
+there is a comma between two cte and there is no comma between cte and the query that use cte
+
+second, cte could be in a cte . 
+
 
 
 ### Selection area
