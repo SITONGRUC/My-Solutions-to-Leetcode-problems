@@ -139,7 +139,32 @@ there is two kind of case
 
 
 ####  4. WINDOW FUNCTION: 
-LAG(),LEAD(),RANK(),MAX() MIN(),SUM(),DENSE_RANK()  SUM() OVER(PARTITION BY ... ORDER BY ..) DENSE_RANKI()  
+
+##### function list
+ROW_NUMBER(): most basic function 
+
+RANK() and DENSE_RANK() :
+
+rank gives the same number, which has the same values, while row_number doesn't and there is dense_rank()
+The difference between dense_rank() and rank() is that  RANK numbers are skipped so there may be a gap in rankings, and may not be unique.
+DENSE_RANK numbers are not skipped so there will not be a gap in rankings, and may not be unique
+
+SUM(),MAX(),MIN(),AVG() 
+
+SUM(): how to make a cumsum()
+if you would want to make a simple cumsum and would not like to have a window, you could just SUM(name) OVER(ORDER BY name DESC) 
+
+if you would like to hold a window: 
+SUM(num) OVER(ORDER BY num ROWS BETWEEN UNBOUNDED PRECEDING AND unbounded following) # 前后所有的value都加起来
+AVG(num) OVER(ORDER BY num ROWS BETWEEN 1 PRECEDING AND 1 following) # 一个长度为3的窗口
+AVG(num) OVER(ORDER BY num ROWS BETWEEN CURRENT ROW AND unbounded following) #如何写出当前的
+
+and you need to pay attention to the null value in the function 
+
+there is five kinds of key word in this experession: 
+    CURRENT ROW | UNBOUNDED PRECEDING (前面的) | UNBOUNDED FOLLOWING （ 后面的） | expr PRECEDING | expr FOLLOWIN
+    
+LAG(),LEAD()
 
 #### 5. IN: ,ALL,and ANY 
 
@@ -213,13 +238,7 @@ weekday works the same. So all we need is to remember one.
 Try to use DATE_FORMAT()
 
 
-### Windows function: 
 
-1. RANK() VS DENSE_RAN():  rank gives the same number, which has the same values, while row_number doesn't and there is dense_rank()
-
-The difference between dense_rank() and rank() is that  RANK numbers are skipped so there may be a gap in rankings, and may not be unique.
-
-DENSE_RANK numbers are not skipped so there will not be a gap in rankings, and may not be unique
 
 ### Some Pandas
 
