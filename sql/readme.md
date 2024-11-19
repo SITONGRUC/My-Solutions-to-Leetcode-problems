@@ -127,6 +127,12 @@ SELECT IFNULL(NULL, "W3Schools.com");
 
 #### 1. JOIN Fuction : LEFT JOIN/RIGHT JOIN/CROSS JOIN/INNER JOIN 
 
+natural join without the reference column: it would not return any result if the two table don;t have columns with the sasme name. 
+
+USE sakila;
+
+SELECT * FROM film NATURAL JOIN inventory;
+
 ####  2. GROUP BY and HAVING: 
 
 could add with rollup after group by. with mutilever group by it would just return different level sum. 
@@ -212,7 +218,9 @@ SELECT * FROM cet_c,cte_a;
 
 there is a comma between two cte and there is no comma between cte and the query that use cte
 
-second, cte could be in a cte . 
+second, cte could be in a cte .
+
+recursive would not be in aggreage function 
 
 
 
