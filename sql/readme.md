@@ -331,6 +331,11 @@ useful
 For example.
 SELECT * FROM USers WHERE REGEXP_LIKE(email,'^[a-zA-Z]+[a-zA-Z0-9[.][-][_]]*@leetcode[.]com$');
 
+或者是
+
+SELECT * FROM USers WHERE REGEXP_LIKE(mail,'^[a-zA-Z]+[a-zA-Z0-9\\.\\-\\_]*@leetcode[.]com$');
+
+
 [] stand for only one char
 
 For example [0-9],[a-z],[A-Z] [A-Za-z0-9] 
