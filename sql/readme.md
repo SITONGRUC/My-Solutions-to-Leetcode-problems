@@ -138,6 +138,7 @@ Say we have two level of group by, with rollup we could expect one null. null ro
 there is two kind of case 
 
 1 Simple case statetment : CASE [variable] WHEN [value] THEN [return value] ELSE [return] END 
+
 2 Searched case statement, use when there is a null value need to process 
 
 
