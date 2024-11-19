@@ -329,17 +329,35 @@ ORDER BY 1 ASC, 2 DESC;
 ### Regular Experssion
 useful
 For example.
-'^[a-zA-Z]+[a-zA-Z-._0-9].*?@leetcode[.]com$'
+SELECT * FROM USers WHERE REGEXP_LIKE(email,'^[a-zA-Z]+[a-zA-Z0-9[.][-][_]]*@leetcode[.]com$');
 
 [] stand for only one char
 
-For example [0-9],[a-z],[A-Z] [A-Za-z0-9_] 
+For example [0-9],[a-z],[A-Z] [A-Za-z0-9] 
 
 [^n-z] means except, ^ is stand for except. 
 
-This quantifier can be used with any character, or special metacharacters, for example w{3} (three w's), [wxy]{5} (five characters, each of which can be a w, x, or y) and .{2,6} (between two and six of any character).
+**1.** SELECT regexp_like('yyy','[w]{3}');
 
-These quantifiers can be used with any character or special metacharacters, for example a+ (one or more a's), [abc]+ (one or more of any a, b, or c character) and .* (zero or more of any character).
+SELECT regexp_like('www','[w]{3}');
+
+means that if w repeat three times, it mataches 
+
+**2.** SELECT regexp_like('yyy','[wxy]{3}');
+
+any of x,y,w repeat three times would fit 
+ 
+**3.**
++: 	匹配前面的子表达式一次或多次。例如，'zo+' 能匹配 "zo" 以及 "zoo"，但不能匹配 "z"。+ 等价于 {1,}
+
+ *:匹配前面的子表达式零次或多次。例如，zo* 能匹配 "z" 以及 "zoo"。* 等价于{0,}。
+
+ {n,m}	m 和 n 均为非负整数，其中n <= m。最少匹配 n 次且最多匹配 m 次
+
+ how to select . in the reg? use [.] 
+
+ e.g [a-zA-Z0-9[.]] 里面的意思全部是or
+
 
 ### Python VS SQL ALL 
 
