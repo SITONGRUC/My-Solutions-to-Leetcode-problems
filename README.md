@@ -1,4 +1,3 @@
-# My-Solutions-to-Leetcode-problems
 These are my solutions to the problems I've solved from the website leetcode.com using python. 
 I'll be uploading the solutions to more problems as I solve them.  NOTE: I have uploaded only the "solution class" of the code. 
 And it's also for sql, excel comparison with python
@@ -9,4 +8,4 @@ And the names of the file are consisting of two parts. Knowledge-leetcodenumber
 
 it also include git and shell
 this is for a trial about git and vim
-another trail on this staff
+Why this didn't work another trail on this staff
