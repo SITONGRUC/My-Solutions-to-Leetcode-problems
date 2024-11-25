@@ -1,20 +1,29 @@
-pwd
+### some exmpale about commaand line aand git 
 
-pwd
+#### pwd
 
-ls
+pring current working path 
 
-mkdir demo
+#### ls
 
-cd "./demo"
+list all files under the working path 
 
-git init ( if you just pull from GitHub you don't need this line)
-
-ls -a ( could show hidden files0
+ls -a could show hidden files0
 
 ls .git( you could also show the files in .git)
 
-Git status
+#### mkdir 
+make a new working path
+
+#### cd "./demo"
+change working path 
+
+
+#### git init 
+( if you just clone from GitHub you don't need this line)
+
+
+#### Git status
 
 git add hello.txt
 
