@@ -38,6 +38,7 @@ git checkout master
 
 (Output:Switched to branch 'master')
 
+#### branch 
 git branch
 
 git branch -vv
