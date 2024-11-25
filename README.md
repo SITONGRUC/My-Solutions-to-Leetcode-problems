@@ -1,8 +1,9 @@
-I trying to see that this is my code exercise. 
+# My practice 
 
-But in fact it didn't work for my process of looking job 
+## mysql 
 
-I just feel deperssed and without any hope
+## alg
 
-I might commmited suicide. 
+
+## git
 
